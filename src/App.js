@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Admin from './Pages/Admin';
+import Kontakt from './Pages/Kontakt';
+import Survey from './Pages/Survey';
+import BagUndersøgelsen from './Pages/BagUndersøgelsen';
+import DataEtik from './Pages/DataEtik';
+import Kvalitetssikring from './Pages/Kvalitetssikring';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="w-24" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/admin" element={<Admin />} />
+        <Route path="/kontakt" element={<Kontakt />} />
+        <Route path="/survey" element={<Survey />} />
+        <Route path="/bagundersogelsen" element={<BagUndersøgelsen />} />
+        <Route path="/dataetik" element={<DataEtik />} />
+        <Route path="/kvalitetssikring" element={<Kvalitetssikring />} />
+      </Routes>
+    </Router>
   );
 }
 
