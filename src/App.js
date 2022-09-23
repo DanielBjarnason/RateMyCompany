@@ -7,11 +7,13 @@ import Survey from './Pages/Survey';
 import BagUndersøgelsen from './Pages/BagUndersøgelsen';
 import DataEtik from './Pages/DataEtik';
 import Kvalitetssikring from './Pages/Kvalitetssikring';
+import Home from './Pages/Home';
 
 function App() {
   return (
     <Router>
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/kontakt" element={<Kontakt />} />
         <Route path="/survey" element={<Survey />} />

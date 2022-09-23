@@ -66,10 +66,10 @@ function Admin() {
   };
 
   return (
-    <div className="grid justify-items-center h-screen">
-      <div className="pt-20 bg-orange-500">
+    <div className="h-screen">
+      <div className="pt-20 bg-emerald-400 w-full grid justify-items-center">
         <input
-          className="m-10 border-solid border-2 border-black rounded h-12 w-48 text-lg flex justify-items-center align-middle columns-1"
+          className="m-5 border-solid border-2 border-black rounded h-12 w-48 text-lg flex justify-items-center align-middle columns-1"
           type="text"
           placeholder="Navn..."
           onChange={(event) => {
@@ -77,7 +77,7 @@ function Admin() {
           }}
         />
         <input
-          className="m-10 border-solid border-2 border-black rounded h-12 w-48 text-lg flex justify-items-center align-middle columns-1"
+          className="m-5 border-solid border-2 border-black rounded h-12 w-48 text-lg flex justify-items-center align-middle columns-1"
           type="text"
           placeholder="Beliggenhed..."
           onChange={(event) => {
@@ -85,7 +85,7 @@ function Admin() {
           }}
         />
         <input
-          className="m-10 border-solid border-2 border-black rounded h-12 w-48 text-lg flex justify-items-center align-middle columns-1"
+          className="m-5 border-solid border-2 border-black rounded h-12 w-48 text-lg flex justify-items-center align-middle columns-1"
           type="number"
           placeholder="Antal ansatte..."
           onChange={(event) => {
@@ -93,7 +93,7 @@ function Admin() {
           }}
         />
         <input
-          className="m-10 border-solid border-2 border-black rounded h-12 w-48 text-lg flex justify-items-center align-middle columns-1"
+          className="m-5 border-solid border-2 border-black rounded h-12 w-48 text-lg flex justify-items-center align-middle columns-1"
           type="text"
           placeholder="Branche..."
           onChange={(event) => {
@@ -101,7 +101,7 @@ function Admin() {
           }}
         />
         <input
-          className="m-10 border-solid border-2 border-black rounded h-12 w-48 text-lg flex justify-items-center align-middle columns-1"
+          className="m-5 border-solid border-2 border-black rounded h-12 w-48 text-lg flex justify-items-center align-middle columns-1"
           type="text"
           placeholder="Omsætning..."
           onChange={(event) => {
@@ -109,17 +109,17 @@ function Admin() {
           }}
         />
         <button
-          className="m-10 border-solid border-2 border-lime-500 rounded h-12 w-48"
+          className="text-white bg-emerald-800 m-10 border-solid border-2 border-lime-500 rounded h-12 w-48"
           onClick={createFirma}
         >
           Opret Firma
         </button>
       </div>
-      <div className="firmaliste">
+      <div className="bg-emerald-200 grid justify-items-center">
         {listOfFirma.map((firmas) => {
           return (
-            <div className="m-10 flex row min-w-full">
-              <div className="border-solid border-2 border-lime-500 rounded bg-emerald-600">
+            <div className="mt-10 flex row text-white bg-emerald-700">
+              <div className="">
                 <h1 className="text-6xl font-bold mb-4">Navn: {firmas.navn}</h1>
                 <h1 className="text-6xl font-bold mb-4">
                   Beliggenhed: {firmas.beliggenhed}
