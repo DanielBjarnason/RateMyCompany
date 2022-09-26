@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function DataEtik() {
+function DataEtik() {
   return (
     <div class="row">
       <h1 class="text-center">Dataetik</h1>
@@ -14,3 +14,5 @@ export default function DataEtik() {
     </div>
   );
 }
+
+export default DataEtik;

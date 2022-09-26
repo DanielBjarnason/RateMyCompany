@@ -16,7 +16,10 @@ function Footer() {
           <Link to="/dataetik">Dataetik</Link>
         </div>
         <div className="col-1">
-          <Link to="/kvalitetssikring"> Kvalitetssikring</Link>
+          <Link to="/kvalitetssikring">Kvalitetssikring</Link>
+        </div>
+        <div className="col-1 mt-5">
+          <Link to="/legal">Legal</Link>
         </div>
       </div>
 
@@ -29,7 +32,7 @@ function Footer() {
           <Link to="">Instagram</Link>
         </div>
       </div>
-      <small className="ml-72 mt-72 ">
+      <small className="ml-96 mt-72 ">
         © 2022 RateMyCompany. Alle rettigheder forbeholdes.
       </small>
     </div>

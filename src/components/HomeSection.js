@@ -1,16 +1,23 @@
 import React from 'react';
 import './HomeSection.css';
+import SearchBar from './SearchBar';
+import { useEffect, useState } from 'react';
+import Axios from 'axios';
 
 function HomeSection() {
+  const [listOfFirma, setListOfFirma] = useState([]);
+
+  useEffect(() => {
+    Axios.get('http://localhost:3001/getFirma').then((response) => {
+      setListOfFirma(response.data);
+    });
+  }, []);
+
   return (
-    <div className="home-section text-center text-white">
-      <h1 className="text-7xl pt-32">RateMyCompany</h1>
-      <h2 className="text-4xl my-5">Arbejdsmiljø - I fokus</h2>
-      <input
-        type="text"
-        placeholder="   Søg på virksomhed"
-        className="mt-32 h-12 w-96 rounded text-black cursor-pointer"
-      />
+    <div className="text-center text-white home-section">
+      <h1 className="pt-20 text-7xl">RateMyCompany</h1>
+      <h2 className="my-5 text-4xl">Arbejdsmiljø - I fokus</h2>
+      <SearchBar placeholder="Søg efter virksomhed" data={listOfFirma} />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function BagUndersøgelsen() {
+function BagUndersøgelsen() {
   return (
     <div class="row">
       <h1 class="text-center">Bagrunden for vores spørgeskema</h1>
@@ -71,3 +71,5 @@ export default function BagUndersøgelsen() {
     </div>
   );
 }
+
+export default BagUndersøgelsen;

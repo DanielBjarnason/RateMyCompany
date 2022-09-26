@@ -1,5 +1,7 @@
 import React from 'react';
 
-export default function Survey() {
+function Survey() {
   return <div>Survey</div>;
 }
+
+export default Survey;

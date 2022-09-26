@@ -16,7 +16,7 @@ function Admin() {
     });
   }, []);
 
-  const opdaterFirma = (id) => {
+  /* const opdaterFirma = (id) => {
     const newNavn = prompt('Opdater navn: ');
     const newBeliggenhed = prompt('Opdater beliggenhed: ');
     const newAntalAnsatte = prompt('Opdater antal ansatte: ');
@@ -31,7 +31,7 @@ function Admin() {
       newOmsætning,
       id,
     });
-  };
+  }; */
 
   const sletFirma = (id) => {
     Axios.delete(`http://localhost:3001/delete/${id}`).then(() => {
@@ -67,9 +67,9 @@ function Admin() {
 
   return (
     <div className="h-screen">
-      <div className="pt-20 bg-emerald-400 w-full grid justify-items-center">
+      <div className="grid w-full pt-20 bg-emerald-400 justify-items-center">
         <input
-          className="m-5 border-solid border-2 border-black rounded h-12 w-48 text-lg flex justify-items-center align-middle columns-1"
+          className="flex w-48 h-12 m-5 text-lg align-middle border-2 border-black border-solid rounded justify-items-center columns-1"
           type="text"
           placeholder="Navn..."
           onChange={(event) => {
@@ -77,7 +77,7 @@ function Admin() {
           }}
         />
         <input
-          className="m-5 border-solid border-2 border-black rounded h-12 w-48 text-lg flex justify-items-center align-middle columns-1"
+          className="flex w-48 h-12 m-5 text-lg align-middle border-2 border-black border-solid rounded justify-items-center columns-1"
           type="text"
           placeholder="Beliggenhed..."
           onChange={(event) => {
@@ -85,7 +85,7 @@ function Admin() {
           }}
         />
         <input
-          className="m-5 border-solid border-2 border-black rounded h-12 w-48 text-lg flex justify-items-center align-middle columns-1"
+          className="flex w-48 h-12 m-5 text-lg align-middle border-2 border-black border-solid rounded justify-items-center columns-1"
           type="number"
           placeholder="Antal ansatte..."
           onChange={(event) => {
@@ -93,7 +93,7 @@ function Admin() {
           }}
         />
         <input
-          className="m-5 border-solid border-2 border-black rounded h-12 w-48 text-lg flex justify-items-center align-middle columns-1"
+          className="flex w-48 h-12 m-5 text-lg align-middle border-2 border-black border-solid rounded justify-items-center columns-1"
           type="text"
           placeholder="Branche..."
           onChange={(event) => {
@@ -101,7 +101,7 @@ function Admin() {
           }}
         />
         <input
-          className="m-5 border-solid border-2 border-black rounded h-12 w-48 text-lg flex justify-items-center align-middle columns-1"
+          className="flex w-48 h-12 m-5 text-lg align-middle border-2 border-black border-solid rounded justify-items-center columns-1"
           type="text"
           placeholder="Omsætning..."
           onChange={(event) => {
@@ -109,39 +109,40 @@ function Admin() {
           }}
         />
         <button
-          className="text-white bg-emerald-800 m-10 border-solid border-2 border-lime-500 rounded h-12 w-48"
+          className="w-48 h-12 m-10 text-white border-2 border-solid rounded bg-emerald-800 border-lime-500"
           onClick={createFirma}
         >
           Opret Firma
         </button>
       </div>
-      <div className="bg-emerald-200 grid justify-items-center">
+
+      <div className="grid bg-emerald-200 justify-items-center">
         {listOfFirma.map((firmas) => {
           return (
-            <div className="mt-10 flex row text-white bg-emerald-700">
+            <div className="flex mt-10 text-white row bg-emerald-700">
               <div className="">
-                <h1 className="text-6xl font-bold mb-4">Navn: {firmas.navn}</h1>
-                <h1 className="text-6xl font-bold mb-4">
+                <h1 className="mb-4 text-6xl font-bold">Navn: {firmas.navn}</h1>
+                <h1 className="mb-4 text-6xl font-bold">
                   Beliggenhed: {firmas.beliggenhed}
                 </h1>
-                <h1 className="text-6xl font-bold mb-4">
+                <h1 className="mb-4 text-6xl font-bold">
                   Antal ansatte: {firmas.antalAnsatte}
                 </h1>
-                <h1 className="text-6xl font-bold mb-4">
+                <h1 className="mb-4 text-6xl font-bold">
                   Branche: {firmas.branche}
                 </h1>
-                <h1 className="text-6xl font-bold mb-4">
+                <h1 className="mb-4 text-6xl font-bold">
                   Omsætning: {firmas.omsætning}
                 </h1>
               </div>
-              <button
+              {/* <button
                 onClick={() => {
                   opdaterFirma(firmas._id);
                 }}
                 className="w-20 mx-2 bg-emerald-700"
-              >
+              > 
                 Opdater
-              </button>
+              </button> */}
               <button
                 onClick={() => {
                   sletFirma(firmas._id);

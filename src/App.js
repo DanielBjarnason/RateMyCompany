@@ -8,6 +8,8 @@ import BagUndersøgelsen from './Pages/BagUndersøgelsen';
 import DataEtik from './Pages/DataEtik';
 import Kvalitetssikring from './Pages/Kvalitetssikring';
 import Home from './Pages/Home';
+import Legal from './Pages/Legal';
+import FirmaProfil from './components/FirmaProfil';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
         <Route path="/bagundersogelsen" element={<BagUndersøgelsen />} />
         <Route path="/dataetik" element={<DataEtik />} />
         <Route path="/kvalitetssikring" element={<Kvalitetssikring />} />
+        <Route path="/legal" element={<Legal />} />
+        <Route path="/firmaprofil" element={<FirmaProfil />} />
       </Routes>
     </Router>
   );
