@@ -2,7 +2,7 @@ import React from 'react';
 
 function PsykiskArbejdsmiljø() {
   return (
-    <div className="text-white">
+    <div className="text-white bg-yellow-600">
       <h1 className="pt-10 text-6xl text-center">Psykisk Arbejdsmiljø</h1>
       <div className="">
         <p>

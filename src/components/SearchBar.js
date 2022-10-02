@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import CloseIcon from '@mui/icons-material/Close';
+import { Link } from 'react-router-dom';
 
 function SearchBar({ placeholder, data }) {
   const [filteredData, setFilteredData] = useState([]);
@@ -50,9 +51,9 @@ function SearchBar({ placeholder, data }) {
           <div className="h-64 overflow-hidden overflow-y-auto bg-white rounded w-96 scroll-invisible">
             {filteredData.slice(0, 15).map((value, key) => {
               return (
-                <a className="" href="/firmaprofil">
+                <Link className="" to={`/firmaprofil/${value._id}`}>
                   <p className="mt-5 font-black text-black">{value.navn}</p>
-                </a>
+                </Link>
               );
             })}
           </div>

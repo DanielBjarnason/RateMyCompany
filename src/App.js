@@ -23,7 +23,7 @@ function App() {
         <Route path="/dataetik" element={<DataEtik />} />
         <Route path="/kvalitetssikring" element={<Kvalitetssikring />} />
         <Route path="/legal" element={<Legal />} />
-        <Route path="/firmaprofil" element={<FirmaProfil />} />
+        <Route path="/firmaprofil/:id" element={<FirmaProfil />} />
       </Routes>
     </Router>
   );
